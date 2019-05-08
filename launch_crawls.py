@@ -48,7 +48,7 @@ g_energy_extractor_ids = ["96fcec61-d5fc-4d43-9507-782f447ea8c7",
 
 def get_latest_crawl_data(crawl_run_id, date):
     #url_template = "https://store.import.io/store/crawlRun/{}/_attachment/csv/?_apikey={}"
-    url_tempalte = "https://store.import.io/store/crawlrun/_search?_sort=_meta.creationTimestamp&_page=1&_perpage=1&extractorId={}&_apikey={}"
+    url_template = "https://store.import.io/store/crawlrun/_search?_sort=_meta.creationTimestamp&_page=1&_perpage=1&extractorId={}&_apikey={}"
     url = url_template.format(crawl_run_id, g_apikey)
     r = requests.get(url)
     r.encoding = 'utf-8'
